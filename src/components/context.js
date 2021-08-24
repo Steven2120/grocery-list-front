@@ -1,4 +1,4 @@
-import React from "react";
+import { createContext } from "react";
 
-export const GroceryInputContext = React.createContext({});
-export const GroceryListContext = React.createContext({});
+export const GroceryInputContext = createContext({});
+export const GroceryListContext = createContext({});

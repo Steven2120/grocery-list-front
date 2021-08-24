@@ -17,10 +17,10 @@ function App() {
   async function fetchAllGrocery() {
     try {
       let result = await axios.get(
-        "http://localhost:3001/api/grocery/get-all-groceries"
+        "http://localhost:8080/api/grocery/get-all-groceries"
       );
 
-      setGroceryList(result.data);
+      setGroceryList([result.data]);
     } catch (e) {
       console.log(e);
     }
@@ -29,7 +29,7 @@ function App() {
   async function deleteGrocery(id) {
     try {
       let result = await axios.delete(
-        `http://localhost:3001/api/grocery/delete-grocery-by-id/${id}`
+        `http://localhost:8080/api/grocery/delete-grocery-by-id/${id}`
       );
 
       let filteredArray = groceryList.filter(
@@ -58,7 +58,7 @@ function App() {
 
     try {
       let result = await axios.put(
-        `http://localhost:3001/api/grocery/update-grocery-by-id/${id}`,
+        `http://localhost:8080/api/grocery/update-grocery-by-id/${id}`,
         item
       );
 

@@ -10,7 +10,7 @@ function GroceryInput() {
     e.preventDefault();
     try {
       let result = await axios.post(
-        "http://localhost:3001/api/grocery/create-grocery",
+        "http://localhost:8080/api/grocery/create-grocery",
         {
           grocery,
         }

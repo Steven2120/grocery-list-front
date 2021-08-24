@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GroceryListContext } from "./context";
+
 function Item({ item }) {
   const { deleteGrocery, purchaseGrocery, sortFunc } =
     useContext(GroceryListContext);
